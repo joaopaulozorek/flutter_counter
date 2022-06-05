@@ -43,76 +43,69 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         child: SafeArea(
-          child: Stack(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Positioned(
-                top: 20,
-                child: Padding(
-                  padding: EdgeInsets.all(60.0),
-                  child: Text(
-                    'Flutter Counter',
-                    style: TextStyle(
-                      fontSize: 40,
+              const Padding(
+                padding: EdgeInsets.all(60.0),
+                child: Text(
+                  'Flutter Counter',
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Center(
+                child: Text(
+                  '$_counter',
+                  style: const TextStyle(
+                      fontSize: 120,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(60.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FloatingActionButton(
+                      backgroundColor: Colors.transparent,
+                      elevation: 15,
+                      onPressed: _decrementCounter,
+                      child: const Icon(
+                        Icons.remove,
+                        size: 40,
+                      ),
                     ),
-                  ),
-                ),
-              ),
-              Positioned(
-                child: Center(
-                  child: Text(
-                    '$_counter',
-                    style: const TextStyle(
-                        fontSize: 120,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Positioned(
-                bottom: 0,
-                child: Padding(
-                  padding: const EdgeInsets.all(60.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      FloatingActionButton(
-                        backgroundColor: Colors.transparent,
-                        elevation: 15,
-                        onPressed: _decrementCounter,
-                        child: const Icon(
-                          Icons.remove,
-                          size: 40,
-                        ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    FloatingActionButton(
+                      mini: true,
+                      backgroundColor: Colors.transparent,
+                      elevation: 15,
+                      onPressed: _restart,
+                      child: const Icon(
+                        Icons.restart_alt,
+                        size: 30,
                       ),
-                      const SizedBox(
-                        width: 50,
+                    ),
+                    const SizedBox(
+                      width: 50,
+                    ),
+                    FloatingActionButton(
+                      backgroundColor: Colors.transparent,
+                      elevation: 15,
+                      onPressed: _incrementCounter,
+                      child: const Icon(
+                        Icons.add,
+                        size: 40,
                       ),
-                      FloatingActionButton(
-                        mini: true,
-                        backgroundColor: Colors.transparent,
-                        elevation: 15,
-                        onPressed: _restart,
-                        child: const Icon(
-                          Icons.restart_alt,
-                          size: 30,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      FloatingActionButton(
-                        backgroundColor: Colors.transparent,
-                        elevation: 15,
-                        onPressed: _incrementCounter,
-                        child: const Icon(
-                          Icons.add,
-                          size: 40,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ],
