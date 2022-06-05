@@ -22,6 +22,12 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _restart() {
+    setState(() {
+      _counter = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +79,20 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   const SizedBox(
-                    width: 40,
+                    width: 50,
+                  ),
+                  FloatingActionButton(
+                    mini: true,
+                    backgroundColor: Colors.transparent,
+                    elevation: 15,
+                    onPressed: _restart,
+                    child: const Icon(
+                      Icons.restart_alt,
+                      size: 30,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 50,
                   ),
                   FloatingActionButton(
                     backgroundColor: Colors.transparent,
