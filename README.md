@@ -1,7 +1,8 @@
 # Flutter Counter
 
 Um contador feito em Flutter, com as funções de imcrementar, decrementar e resetar a contagem.
-![](lib/assets/Screenshot_20220605_210404.png)
+
+<img width="100" src="https://github.com/joaopaulozorek/flutter_counter/raw/main/lib/assets/Screenshot_20220605_210404.png">
 
 ## Faça Contato 🛸
 
